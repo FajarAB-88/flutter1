@@ -1,14 +1,14 @@
 name: CI Flutter
-on: 
+on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   flutter_test:
     name: Run Flutter and Analyze
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
@@ -18,4 +18,4 @@ jobs:
           channel: "stable"
       - run: flutter pub get
       - run: flutter analyze
-      - run: flutter test 
+      - run: flutter test
