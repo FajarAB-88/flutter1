@@ -2,7 +2,7 @@ name: CI
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   flutter_test:
@@ -51,4 +51,3 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build appbundle
- 
